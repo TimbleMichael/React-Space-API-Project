@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function Home() {
     return(
-        <div className="Home-links">
-            <Link to="/Apod">Picture of the Day</Link>
+        <div>
+            <Link to="/Apod">Show me the Stars</Link>
         </div>
     )
 }
 
-export default Home
+export default Home;

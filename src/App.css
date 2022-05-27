@@ -8,5 +8,22 @@
 }
 
 body {
-  background: black;
+  background: white;
 }
+
+.NavBar{
+  border-radius: 2px;
+  background: white;
+  text-align: center;
+}
+
+.NavBar ul{
+  display:flex;
+  column-gap: 150px;
+  justify-content: space-evenly;
+}
+
+
+
+
+
