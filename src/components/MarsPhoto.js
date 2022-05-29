@@ -1,42 +1,51 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
+import axios  from "axios";
 
 const apiKey = process.env.REACT_APP_NASA_API_KEY;
 
-function MarsWeather() {
+function MarsPhoto() {
 
-    const [photoData, setPhotoData] = useState('null')
+    const [data, setData] = useState('null')
+    const [solDay, setSolDay] = useState('')
+
+    const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=${solDay}&camera=fhaz&api_key=${apiKey}`
 
     const fetchPhotoData = () => {
-        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=${apiKey}`)
+        fetch(apiUrl)
             .then((response) => response.json())
-            .then((data) => setPhotoData(data))
-            
+            .then((data) => setData(data))
     }
 
     useEffect(() => {
         fetchPhotoData()
     }, [])
 
+
     return(
 
         <>
             <NavBar/>
 
-           
-
-
-        
-            <div>
-              {console.log(photoData.photos ? photoData.photos["0"]["id"] : 'null')}
-
-
+            <div className="sol-search">
+                <input 
+                value={solDay}
+                onChange={event => setSolDay(event.target.value)}
+                onKeyPress={fetchPhotoData}
+                placeholder="Enter a Sol Day"
+                type="text"/>
             </div>
+        
+            <div className="image-fhaz">
+                <img src={data.photos ? (data.photos.length !== 0 ? data.photos["0"]["img_src"] : 'https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg') : 'null'}
+                alt="Pitcure"/>
+            </div>
+
+
 
         </>
     )
 }
 
-export default MarsWeather;
+export default MarsPhoto;
 
