@@ -1,11 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NavBar from "./NavBar";
 
 function Home() {
     return(
-        <div>
-            <Link to="/Apod">Show me the Stars</Link>
-        </div>
+
+        <>
+            <NavBar/>
+
+            <div>
+                
+            </div>
+
+        </>
     )
 }
 
