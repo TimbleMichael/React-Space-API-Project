@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "Roboto";
 }
 
 body {
@@ -12,8 +13,8 @@ body {
 }
 
 .NavBar{
-  border-radius: 2px;
   background: white;
+  padding: 5px;
   text-align: center;
 }
 
@@ -21,6 +22,64 @@ body {
   display:flex;
   column-gap: 150px;
   justify-content: space-evenly;
+}
+
+.Home-intro{
+  background: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+  height: 98vh;
+  padding-top: 250px;
+}
+
+.Home-content{
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  font-weight: 400;
+}
+
+.Home-background{
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+.Home-background h1, h4{
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.Apod-image{
+  width: 100%;
+  height: 100vh;
+}
+
+.Apod-content{
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+  color: white;
+}
+
+.Apod-content h1, p{
+  padding-bottom: 10px;
+}
+
+.Apod-date{
+  font-style: italic;
+  font-weight: 400;
+}
+
+.Apod-explanation{
+  margin-left: 500px;
+  margin-right: 500px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  font-weight: 500;
+  text-align: justify;
+  padding-bottom: 50px;
 }
 
 

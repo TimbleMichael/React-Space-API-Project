@@ -25,22 +25,22 @@ function Apod() {
             <NavBar/>
 
             <div>
-                {photoData.media_type === "image" ? (<img src={photoData.hdurl} alt={photoData.title} width={'100%'}/>) : 
+
+                {photoData.media_type === "image" ? (<img src={photoData.hdurl} alt={photoData.title} className="Apod-image"/>) : 
                                                     (<iframe title="space-video" 
                                                     src={photoData.hdurl} 
                                                     frameBorder="0" 
                                                     gesture="media" 
                                                     allow="encrypted-media; autoplay" 
                                                     allowFullScreen 
-                                                    className="photto"/>)}
+                                                    />)}
                 
-                <div>
+                <div className="Apod-content">
                     <h1>{photoData.title}</h1>
-                    <p>{photoData.date}</p>
-                    <p>{photoData.explanation}</p>
+                    <p className="Apod-date">{photoData.date}</p>
+                    <p className="Apod-explanation">{photoData.explanation}</p>
                 </div>
 
-                
             </div>
 
         </>
