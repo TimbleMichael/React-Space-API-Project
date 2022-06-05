@@ -53,7 +53,6 @@ body {
 
 .Apod-image{
   width: 100%;
-  height: 100vh;
 }
 
 .Apod-content{
@@ -80,6 +79,13 @@ body {
   font-weight: 500;
   text-align: justify;
   padding-bottom: 50px;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: auto auto auto;
+ 
+
 }
 
 
