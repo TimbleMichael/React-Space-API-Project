@@ -1,0 +1,14 @@
+{
+  "photos": [
+    {
+      "name": "Moon",
+      "photoUrl": "https://cdn130.picsart.com/347797504015201.jpg?type=webp&to=crop&r=256",
+      "id": 1
+    },
+    {
+      "name": "Phobos",
+      "photoUrl": "https://a.thumbs.redditmedia.com/86Crge5rk2fA7xDirMRB8bZuVOud00QgWpXHT0tH9H0.png",
+      "id": 2
+    }
+  ]
+}
