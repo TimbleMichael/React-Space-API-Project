@@ -26,11 +26,10 @@ function Apod() {
 
             <div>
 
-                {photoData.media_type === "image" ? (<img src={photoData.hdurl} alt={photoData.title} className="Apod-image"/>) : 
+                {photoData.media_type === "image" ? (<img src={photoData.url} alt={photoData.title} className="Apod-image"/>) : 
                                                     (<iframe title="space-video" 
                                                     src={photoData.hdurl} 
                                                     frameBorder="0" 
-                                                    gesture="media" 
                                                     allow="encrypted-media; autoplay" 
                                                     allowFullScreen 
                                                     />)}

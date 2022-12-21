@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Apod from './components/Apod'
 import MarsPhoto from './components/MarsPhoto'
 import Planets from './components/Planets'
+import Error from './components/Error';
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='Apod' element={<Apod/>} />
         <Route path='MarsPhoto' element={<MarsPhoto/>} />
         <Route path='Planets' element={<Planets/>} />
+        <Route path="*" element={<Error/>} />
       </Routes>
     </BrowserRouter>
 
